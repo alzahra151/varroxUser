@@ -1,4 +1,6 @@
-<nav class="navbar sticky-top justify-content-between customNav navbar-expand-lg navbar-light shadow-sm d-flex pt-0 mt-0" dir="{{direction}}">
+<nav
+  class="navbar sticky-top justify-content-between customNav navbar-expand-lg navbar-light shadow-sm d-flex pt-0 mt-0"
+  dir="{{direction}}">
   <a href="#" class="navbar-brand ">
     <div class="logo">
       <img class="w-100 me-0 " src="assets/logo.jpg">
@@ -7,15 +9,12 @@
     </div>
 
   </a>
-  <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      
-    </button> -->
 
   <div class="d-lg-block d-none justify-content-center" id="navbarSupportedContent">
     <div class=" ">
       <ul class=" navbar-nav mx-auto fs-5  m-3">
         <li class="nav-item active ">
-          <a class="nav-link" href="#">{{"home" | translate}} </a>
+          <a class="nav-link" [routerLink]="['/']">{{"home" | translate}} </a>
         </li>
         <li class="nav-item option">
           <div class="nav-item dropdown me-5">
@@ -49,7 +48,8 @@
 
   </div>
   <div class="d-flex ">
-    <button class=" contact btn  btn-sm btn-lg-lg  me-3 ms-3 fs-5 fw-bold  text-warrning">{{"contactUs" | translate}}</button>
+    <button class=" contact btn  btn-sm btn-lg-lg  me-3 ms-3 fs-5 fw-bold  text-warrning">{{"contactUs" |
+      translate}}</button>
     <button class="btn btn-dark d-lg-none d-block " type="button" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
         class="bi bi-list text-light"></i>{{"Menu" | translate}}</button>

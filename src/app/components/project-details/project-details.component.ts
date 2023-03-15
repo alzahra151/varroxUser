@@ -5,7 +5,7 @@ import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
 import { UpdatelanguageService } from 'src/app/services/updatelanguage.service';
 import { TranslateService } from '@ngx-translate/core';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
@@ -17,7 +17,8 @@ export class ProjectDetailsComponent implements OnInit{
   project:any={}
   constructor(private ActivatedRoute:ActivatedRoute ,
              private projectSevice:ProjectService,
-             private languagSevice:UpdatelanguageService){
+             private languagSevice:UpdatelanguageService,
+             private location:Location){
   }
   ngOnInit(): void {
     this.ActivatedRoute.params.subscribe((param)=>{
@@ -43,5 +44,10 @@ export class ProjectDetailsComponent implements OnInit{
     })
   
   }
+
+    goToback(){
+      this.location.back()
+    }
+  
 
 }
